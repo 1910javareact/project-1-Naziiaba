@@ -5,7 +5,12 @@ This project is a Full Stack application for Employee Reimbursement.
 ## Tools
 
 
-React 
-Postgres
+* React 
+* TypeScript
+* Postgres etc.
+
+## Resources
+
+
 
 
