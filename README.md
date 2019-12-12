@@ -9,7 +9,7 @@ This project is a Full Stack application for Employee Reimbursement.
 * TypeScript
 * Postgres etc.
 
-## Resources
+## Tasks
 
 
 
