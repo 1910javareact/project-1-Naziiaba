@@ -1,2 +1,9 @@
-# project-1-Naziiaba
-Project 1. 
+# PROJECT 1
+
+This project is a Full Stack application for Employee Reimbursement. 
+
+*Tools*
+React 
+Postgres
+
+
