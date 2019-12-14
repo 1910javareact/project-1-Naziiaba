@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { SyntheticEvent } from 'react'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { User } from '../../models/user'
 
-export class LoginComponent extends React.Component<any, any> {
+
+interface ILoginComponentProps{
+    user:User
+    svLogin:(u:string, p:string)=>void
+}
+
+
+export class LoginComponent extends React.Component<ILoginComponentProps, any> {
     constructor(props: any) {
         super(props)
         this.state = {
@@ -22,6 +30,11 @@ export class LoginComponent extends React.Component<any, any> {
         })
     }
 
+    submitLogin = async (e:SyntheticEvent) => {
+        e.preventDefault()
+        this.props.svLogin(this.state.username, this.state.password)
+
+    }
 
     render() {
         return (
@@ -37,6 +50,7 @@ export class LoginComponent extends React.Component<any, any> {
                     </FormGroup>
                     <Button color='primary'>Submit</Button>
                 </Form>
+                <p>{this.props.user.username}</p>
             </div>
         )
     }
