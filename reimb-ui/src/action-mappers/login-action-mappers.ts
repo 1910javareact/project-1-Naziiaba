@@ -1,12 +1,12 @@
 
 
-export const svLoginTypes = {
+export const userLoginTypes = {
     INVALID_CREDENTIALS: 'P1_LOGIN_INVALID_CREDENTIALS',
     SUCCESSFUL_LOGIN: 'P1_LOGIN_SUCCESFUL_LOGIN',
     UNSUCCESSFUL_LOGIN: 'P1_LOGIN_FAILED_LOGIN'
 }
 
-export const svLogin = (username:string, password:string) => async (dispatch: any) => {
+export const userLogin = (username:string, password:string) => async (dispatch: any) => {
 
     try {
         let res = await userLogin(username, password)
@@ -14,19 +14,19 @@ export const svLogin = (username:string, password:string) => async (dispatch: an
         if(res.status === 200){
 
             dispatch({
-                type:myLoginTypes.SUCCESSFUL_LOGIN,
+                type:userLoginTypes.SUCCESSFUL_LOGIN,
                 payload:{
-                    usr:res.body
+                    user:res.body
                 }
             })
         } else {
             dispatch ({
-                type:myLoginTypes.INVALID_CREDENTIALS
+                type:userLoginTypes.INVALID_CREDENTIALS
             })
         }
     }catch(e) {
         dispatch ({
-            type:myLoginTypes.UNSUCCESSFUL_LOGIN
+            type:userLoginTypes.UNSUCCESSFUL_LOGIN
         })
     }
 
