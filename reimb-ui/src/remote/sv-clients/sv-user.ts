@@ -1,7 +1,8 @@
-import { svUserClient } from "./user-client";
+import { svUserClient } from "./sv-user-client";
 
 
-export async function userLogin(username:string, password:string){
+
+export async function siliconValleyLogin(username:string, password:string){
     const credentials = {
         username,
         password
@@ -20,7 +21,8 @@ export async function userLogin(username:string, password:string){
             }
         }
     } catch(e) {
-        console.log(e);throw new Error('Something Went Wrong')
+        console.log(e);
+        throw new Error('Something Went Wrong')
     }
 }
 

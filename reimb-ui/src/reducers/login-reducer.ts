@@ -1,18 +1,19 @@
-import { ILoginState } from ".";
-import { User } from "../../models/user";
-import { svLoginTypes } from "../../action-mappers/login-action-mappers";
+import { ILoginState } from "../reducers";
+import { User } from "../models/user";
+import { svLoginTypes } from "../action-mappers/login-action-mappers";
 
 
 
 const initialState: ILoginState = {
-    user: new User(0, '','','','','',[])
+    user: new User(0, '', '', '', '', '', [])
 }
 
 
 export const loginReducer = (state = initialState, action:any) => {
 
-    switch(action.type) {
-        case svLoginTypes.SUCCESSFUL_LOGIN: {
+    switch (action.type) {
+        case svLoginTypes.SUCCESSFUL_LOGIN:{
+
             return {
                 ...state,
                 user:action.payload.user
