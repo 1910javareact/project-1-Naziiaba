@@ -3,6 +3,7 @@ import { User } from '../../../models/user';
 
 interface IUsersDisplayRowProps{
     user: User
+    
 }
 
 export const UsersDisplayRowComponent: React.FC<IUsersDisplayRowProps> = (props) => {

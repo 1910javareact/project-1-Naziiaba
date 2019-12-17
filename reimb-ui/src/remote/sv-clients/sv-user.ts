@@ -21,8 +21,8 @@ export async function siliconValleyLogin(username:string, password:string){
             }
         }
     } catch(e) {
-        console.log(e);
-        throw new Error('Something Went Wrong')
+        // console.log(e);
+        throw new Error('Something Went Wrong 1')
     }
 }
 
@@ -44,6 +44,6 @@ export const getAllUsers = async() => {
         }
     }catch(e) {
         console.log(e);
-        throw new Error('Something Went Wrong')
+        throw new Error('Something Went Wrong 2')
     }
 }

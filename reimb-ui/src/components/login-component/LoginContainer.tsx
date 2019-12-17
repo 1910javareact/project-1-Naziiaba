@@ -5,8 +5,6 @@ import { svLogin } from '../../action-mappers/login-action-mappers'
 
 
 
-
-
 const mapStateToProps = (state: IState) => {
     
     return {

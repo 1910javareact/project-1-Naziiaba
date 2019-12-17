@@ -1,24 +1,24 @@
 import React from 'react'
-import { siliconValleyLogin } from '../../remote/sv-clients/sv-user'
+
 
 export class Home extends React.Component<any, any>{
     constructor(props:any){
         super(props)
-        this.state={
-            garden:{}
+        this.state = {
+            user:{}
         }
     }
 
-    async componentDidMount(){
-        let user = await siliconValleyLogin('franky', 'password')
-        this.setState({
-            ...this.state,
-            user
-        })
-    }
+    // async componentDidMount(){
+    //     let user = await siliconValleyLogin('franky', 'password')
+    //     this.setState({
+    //         ...this.state,
+    //         user
+    //     })
+    // }
 
     render() {
-        console.log(this.state.user);
+        // console.log(this.state.user);
         
         return (
             // we have a special tag in react that isn't a real element

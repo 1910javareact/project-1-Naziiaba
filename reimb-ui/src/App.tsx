@@ -6,6 +6,8 @@ import  UsersDisplayComponent  from './components/users-display/UsersDisplayCont
 import { Provider } from 'react-redux';
 import { store } from './Store';
 import { Home } from './components/home/Home';
+import UserNavBar from './components/navbar/UserNavBar';
+// import { ReimbursementsDisplayComponent } from './components/reimbursements-display/ReimbursementsDisplayComponent';
 
 const App: React.FC = () => {
   return (
@@ -13,9 +15,13 @@ const App: React.FC = () => {
       <Provider store={store}>
         <Router>
            {/* here comes navbar */}
+           <nav>
+              <UserNavBar/>
+            </nav>
             <Switch>
               <Route path='/login' component={LoginComponent} />
               <Route path='/users/display' component={UsersDisplayComponent} />
+              {/* <Route path='/reimbursements' component={ReimbursementsDisplayComponent} /> */}
               <Route path='/'>
                 <Home/>
               </Route>

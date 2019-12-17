@@ -43,7 +43,7 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
             return <UsersDisplayRowComponent user={e} key={'user ' + e.userId} />
         })
         return (
-            this.props.user.id ?
+            this.props.user.userId ?
                 <div>
                     <Table bordered color='danger'>
                         <thead>

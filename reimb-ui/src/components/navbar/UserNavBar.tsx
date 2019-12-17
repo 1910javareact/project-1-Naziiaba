@@ -5,12 +5,11 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
+ 
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -21,41 +20,41 @@ const UserNavBar = (props:any) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="lightgrey" light expand="md">
         <NavItem>
           <Link to='/'>Employee Reimbursement</Link>
         </NavItem>
+
+        
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <Link to='/login'>Login</Link>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
+            
+            
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Pages
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
+                {/* <DropdownItem>
                   <Link to='/chucknorris'>ChuckNorrisJoke</Link>
-                </DropdownItem>
+                </DropdownItem> */}
                 <DropdownItem>
-                  <Link to='/clicker'>Clicker</Link>
+                  <Link to='/users/display'>Users</Link>
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>
+                {/* <DropdownItem>
                   <Link to='/tictactoe'>Tic-Tac-Toe</Link>
-                </DropdownItem>
+                </DropdownItem> */}
                 <DropdownItem>
-                  <Link to='/users/display'>User Table</Link>
+                  <Link to='/status/:statusId'>Reimbursements</Link>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavItem>
+              <Link to='/login'>Login</Link>
+            </NavItem>
         </Collapse>
       </Navbar>
     </div>
@@ -63,3 +62,4 @@ const UserNavBar = (props:any) => {
 }
 
 export default UserNavBar;
+
