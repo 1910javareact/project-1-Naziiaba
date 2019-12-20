@@ -1,5 +1,5 @@
 import React, { SyntheticEvent } from 'react'
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { Form, FormGroup, Label, Input, Button, Col, Row} from 'reactstrap'
 import { User } from '../../models/user'
 
 
@@ -40,18 +40,40 @@ export class LoginComponent extends React.Component<ILoginComponentProps, any> {
         return (
             <div>
                 <Form onSubmit={this.submitLogin}>
+                    <Row form>
+                        <Col md={4}>
                     <FormGroup>
                         <Label for="exampleUsername">Username</Label>
-                        <Input value={this.state.username} onChange={this.updateUsername} type="text" name="username" id="exampleUsername" placeholder="with a placeholder" />
+                        <Input value={this.state.username} onChange={this.updateUsername} type="text" name="username" id="exampleUsername" placeholder="Enter username" />
                     </FormGroup>
+                    </Col>
+                   <Col md={4}>
                     <FormGroup>
                         <Label for="examplePassword">Password</Label>
-                        <Input value={this.state.password} onChange={this.updatePassword} type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+                        <Input value={this.state.password} onChange={this.updatePassword} type="password" name="password" id="examplePassword" placeholder="Enter password" />
                     </FormGroup>
-                    <Button color='primary'>Submit</Button>
+                   
+                    <FormGroup check>
+                <Label check>
+                     <Input type="checkbox" id="checkbox2" />{' '}
+                         Remember me
+                     </Label>
+                     
+                     <Col md={10}>
+                     <Button color='primary'>Login</Button>
+                     </Col>
+                </FormGroup>
+                
+                    {/* <Button color='primary'>Login</Button> */}
+                    </Col>
+                    
+                    </Row>
+                    
                 </Form>
                 <p>{this.props.user.username}</p>
             </div>
         )
     }
 }
+
+

@@ -1,5 +1,5 @@
 import React from 'react'
-import { User } from '../../models/user';
+import { User, Role } from '../../models/user';
 
 interface IUserLoginStateState {
     user: User

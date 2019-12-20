@@ -1,5 +1,5 @@
 import React from 'react'
-import { User } from '../../models/user';
+import { User, Role } from '../../models/user';
 import { Table } from 'reactstrap';
 import { RouteComponentProps, Redirect } from "react-router";
 import { getAllUsers } from '../../remote/sv-clients/sv-user';
@@ -11,7 +11,13 @@ interface IUsersDisplayProps extends RouteComponentProps{
 }
 
 interface IUsersDisplayState{
+    // userById: User
     allUsers: User[]
+    // userId: any
+    // username: any
+    // firstName: any
+    // email: any
+
 }
 
 export class UsersDisplayComponent extends React.Component<any, IUsersDisplayState>{
@@ -19,13 +25,21 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
     constructor(props: any) {
         super(props)
         this.state = {
+            // userById: new User(0, '', '', '', '', '', new Role(0, '')),
             allUsers: []
+            // userId: '',
+            // username: '',
+            // firstName: '',
+            // email: ''
         }
     }
+
+
 
     async componentDidMount() {
         try {
             let u = await getAllUsers()
+            // (this.props.user.user_id)
             if (u.status === 200) {
                 this.setState({
                     ...this.state,
@@ -34,26 +48,39 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
             }
         } catch (e) {
             console.log(e);
-
         }
     }
 
+    // getAllUsers = async () => {
+    //     try {
+    //         let u = await getAllUsers()
+    //         if (u.status === 200) {
+    //             this.setState({
+    //                 ...this.state,
+    //                 allUsers: u.body
+    //             })
+    //         }
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    // }
+
     render() {
         let rows = this.state.allUsers.map((e) => {
-            return <UsersDisplayRowComponent user={e} key={'user ' + e.userId} />
+            return <UsersDisplayRowComponent user={e} key={'users ' + e.userId} />
         })
         return (
-            this.props.user.userId ?
+            this.props.user.userId  ?
                 <div>
                     <Table bordered color='danger'>
                         <thead>
                             <tr>
                                 <td>User ID</td>
                                 <td>Username</td>
-                                <td>First Name</td>
-                                <td>Last Name</td>
+                                {/* <td>FirstName</td> */}
+                                {/* <td>LastName</td> */}
                                 <td>Email</td>
-                                <td>Role</td>
+                            
                             </tr>
                         </thead>
                         <tbody>
@@ -61,9 +88,9 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
                         </tbody>
                     </Table>
                 </div>
-                :
+               :
               
-                <Redirect to='/login'/>
+                <Redirect to='/login/'/>
         )
     }
 }

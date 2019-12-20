@@ -12,9 +12,7 @@ export interface IState{
     login:ILoginState
 }
 
-export interface IUserAdminState {
-    user: User[]
-}
+
 
 export const state = combineReducers<IState>({
     login: loginReducer

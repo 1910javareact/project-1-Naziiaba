@@ -1,5 +1,5 @@
 import { ILoginState } from "../reducers";
-import { User } from "../models/user";
+import { User, Role } from "../models/user";
 import { svLoginTypes } from "../action-mappers/login-action-mappers";
 
 
