@@ -9,13 +9,6 @@ export class Home extends React.Component<any, any>{
         }
     }
 
-    // async componentDidMount(){
-    //     let user = await siliconValleyLogin('franky', 'password')
-    //     this.setState({
-    //         ...this.state,
-    //         user
-    //     })
-    // }
 
     render() {
         // console.log(this.state.user);
