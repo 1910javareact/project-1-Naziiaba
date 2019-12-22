@@ -1,15 +1,15 @@
-import { ILoginState } from ".";
+import { IUserState } from ".";
 import { User } from "../models/user";
 import { Role } from "../models/role";
-import { oLoginType } from "../action-mappers/login-action-mappers";
+import { oUserByIdType } from "../action-mappers/user-by-id-action-mapper";
 
-const initialState: ILoginState = {
+const initialState: IUserState = {
     user: new User(0, '', '', '', '', '', new Role(0, ''))
 }
 
-export const loginReducer = (state = initialState, action: any) => {
+export const userByIdReducer = (state = initialState, action: any) => {
     switch (action.type) {
-        case oLoginType.SUCCESSFUL_LOGIN: {
+        case oUserByIdType.USER_BY_ID_SUCCESSFUL: {
             return {
                 ...state,
                 user: action.payload.user

@@ -1,8 +1,10 @@
 import { compose, applyMiddleware, Store, createStore } from "redux"
 import logger from "redux-logger"
-import { state } from "./reducers"
 import reduxThunk from 'redux-thunk'
+import { state } from "./reducers"
 
+//this is how we actually build the store
+//you really shouldn't ever have to change this file
 
 const a:any = window
 
