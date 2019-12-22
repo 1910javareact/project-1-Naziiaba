@@ -2,10 +2,11 @@ import { IReimbursment } from "."
 import { Reimbursement } from "../models/reimbursement"
 import { ReimbTypes } from "../action-mappers/reimbursement-action-mapper"
 
-const initialStater: IReimbursment = {
-   reimbursement: [new Reimbursement(0, 0, 0, 0, 0, '', 0, 0, 0)]
-}
 
+
+const initialStater: IReimbursment = {
+   reimbursement: [new Reimbursement(0, 0, 0, 0, 0, '', 0, 0, 0) []]
+}
 
 //whatever this reducer returns, becomes the total state of the store
 export const reimbursementReducer = (state = initialStater, action:any) => {
@@ -17,7 +18,6 @@ export const reimbursementReducer = (state = initialStater, action:any) => {
             return {
                 ...state,
                 reimbursement:action.payload.reimbursement,
-               // reimbursement:state.reimbursement
             }
         }
         default:
