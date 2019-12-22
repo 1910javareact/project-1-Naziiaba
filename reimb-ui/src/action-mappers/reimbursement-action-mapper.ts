@@ -1,11 +1,13 @@
 import { getReimbursementByStatus } from "../remote/reimbursements-clients/reimbursements-by-status"
 
+
 export const ReimbTypes = {
     INVALID_CREDENTIALS: 'TOKEN_HAS_EXPIRED',
     SUCCESSFUL_REIMBURSEMENT: 'REIMBURSEMENT_FOUND',
     UNSUCCESSFUL_FAILED: 'REIMBURSEMENT_NOT_FOUND'
 }
-export const reimbursementID = (id:number) => async (dispatch:any) => {
+
+export const reimbursementId = (id:number) => async (dispatch:any) => {
 
     try{
         let res = await getReimbursementByStatus(id)
