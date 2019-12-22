@@ -11,10 +11,10 @@ export const UsersDisplayRowComponent: React.FC<IUsersDisplayRowProps> = (props)
         <tr>
             <td>{props.user.userId}</td>
             <td>{props.user.username}</td>
-            {/* <td>{props.user.firstName}</td> */}
-            {/* <td>{props.user.lastName}</td> */}
+            <td>{props.user.firstName}</td> 
+            <td>{props.user.lastName}</td>
             <td>{props.user.email}</td>
-            {/* <td>{props.user.roles}</td> */}
+            <td>{props.user.roles}</td>
         </tr>
     )
 }

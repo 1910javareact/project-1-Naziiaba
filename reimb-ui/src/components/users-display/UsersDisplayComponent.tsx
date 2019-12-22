@@ -11,12 +11,12 @@ interface IUsersDisplayProps extends RouteComponentProps{
 }
 
 interface IUsersDisplayState{
-    // userById: User
+    userById: User
     allUsers: User[]
-    // userId: any
-    // username: any
-    // firstName: any
-    // email: any
+    userId: any
+    username: any
+    firstName: any
+    email: any
 
 }
 
@@ -25,12 +25,12 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
     constructor(props: any) {
         super(props)
         this.state = {
-            // userById: new User(0, '', '', '', '', '', new Role(0, '')),
-            allUsers: []
-            // userId: '',
-            // username: '',
-            // firstName: '',
-            // email: ''
+            userById: new User(0, '', '', '', '', '', []),
+            allUsers: [],
+            userId: '',
+            username: '',
+            firstName: '',
+            email: ''
         }
     }
 
@@ -51,19 +51,7 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
         }
     }
 
-    // getAllUsers = async () => {
-    //     try {
-    //         let u = await getAllUsers()
-    //         if (u.status === 200) {
-    //             this.setState({
-    //                 ...this.state,
-    //                 allUsers: u.body
-    //             })
-    //         }
-    //     } catch (e) {
-    //         console.log(e);
-    //     }
-    // }
+  
 
     render() {
         let rows = this.state.allUsers.map((e) => {
@@ -77,8 +65,8 @@ export class UsersDisplayComponent extends React.Component<any, IUsersDisplaySta
                             <tr>
                                 <td>User ID</td>
                                 <td>Username</td>
-                                {/* <td>FirstName</td> */}
-                                {/* <td>LastName</td> */}
+                                <td>FirstName</td>
+                                <td>LastName</td>
                                 <td>Email</td>
                             
                             </tr>
