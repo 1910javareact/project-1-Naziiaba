@@ -12,6 +12,7 @@ import ReimbursementByStatusIdComponent from './components/reimbursement-compone
 import ReimbursementByUserIdComponent from './components/reimbursement-component/ReimbursementByUserIdContainer';
 import { UpdateUserComponent } from './components/user-component/UpdateUserComponent';
 import NavBar from './components/nav-bar/NavBar';
+import './components/nav-bar/navbar.css'; 
 
 const App: React.FC = () => {
   return (
