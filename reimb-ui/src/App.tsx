@@ -13,6 +13,8 @@ import ReimbursementByUserIdComponent from './components/reimbursement-component
 import { UpdateUserComponent } from './components/user-component/UpdateUserComponent';
 import NavBar from './components/nav-bar/NavBar';
 import './components/nav-bar/navbar.css'; 
+import { NewReimbursementComponent } from './components/reimbursement-component/SubmitReimbursementComponent';
+import { ReimbursementUpdateComponent } from './components/reimbursement-component/ReimbursementUpdateComponent';
 
 const App: React.FC = () => {
   return (
@@ -27,12 +29,13 @@ const App: React.FC = () => {
             <Route path='/usersupdate' component={UpdateUserComponent} />
             <Route path='/users' component={AllUsersComponent} />
             <Route path='/user' component={UserComponent} />
+            <Route path='/reimbursement/update' component={ReimbursementUpdateComponent} />
             <Route path='/reimbursement/status' component={ReimbursementByStatusIdComponent} />
             <Route path='/reimbursement/user' component={ReimbursementByUserIdComponent} />
-            <Route path='/reimbursement' component={ReimbursementInfoComponent} />
+            <Route path='/reimbursement/new' component={NewReimbursementComponent} />
             <Route path='/login' component={LoginComponent} />
             <Route path='/'>
-             
+            <LoginComponent />
             </Route>
           </Switch>
         </BrowserRouter>

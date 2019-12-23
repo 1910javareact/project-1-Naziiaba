@@ -40,7 +40,7 @@ export class ReimbursementByStatusIdComponent extends React.Component<IReimburse
                     </FormGroup>
 
 
-                    <Button type="submit"  variant="contained" color="primary" className='{classes.submit}'>
+                    <Button type="submit"  variant="contained" color="warning" className='{classes.submit}'>
                         Find Reimbursement
                     </Button>
                 </Form>

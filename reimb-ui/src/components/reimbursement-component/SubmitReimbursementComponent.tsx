@@ -99,40 +99,68 @@ export class NewReimbursementComponent extends React.Component<any, any> {
             <div>
                 <h2>Create a new Reimbursement</h2>
                 <br/>
+    
                 <Form onSubmit={this.submitReimbursement} className="updateReimbursement" noValidate autoComplete="off">
-                    <FormGroup>
-                        <Label for="author">Author</Label>
-                        <Input type="text" name="author" id="author" onChange={this.updateAuthor} />
-                    </FormGroup>
+                <div id="wrapper">
+  <header>
+    <div className="container">
+      <table>
+        <tbody>
+          <tr>
+          <td>
+              <button type="submit" className="btn">
+              Author:
+              </button>
+            </td>
+            <td>
+            <Input type="text" name="author" id="author" onChange={this.updateAuthor} />
+            </td>
+            </tr>
+            
+            <tr>
+            <td>
+              <button type="submit" className="btn">
+                Amount:
+              </button>
+            </td>
+            <td>
+            <Input type="text" name="author" id="author" onChange={this.updateAmount} />
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <button type="submit" className="btn">
+              Date Submitted:
+              </button>
+            </td>
+            <td>
+            <Input type="text" name="dateSubmitted" id="dateSubmitted" onChange={this.updateDateSubmitted} />
+            </td>
+          </tr>
 
-                    <FormGroup>
-                        <Label for="amount">Amount</Label>
-                        <Input type="text" name="amount" id="amount" onChange={this.updateAmount} />
-                    </FormGroup>
+          <tr>
+            <td>
+              <button type="submit" className="btn">
+              Date Resolved:
+              </button>
+            </td>
+            <td>
+            <Input type="text" name="dateResolved" id="dateResolved" onChange={this.updateDateResolved} />
+            </td>
+          </tr>
 
-                    <FormGroup>
-                        <Label for="dateSubmitted">Date Submitted</Label>
-                        <Input type="text" name="dateSubmitted" id="dateSubmitted" onChange={this.updateDateSubmitted} />
-                    </FormGroup>
-
-                    <FormGroup>
-                        <Label for="dateResolved">Date Resolved</Label>
-                        <Input type="text" name="dateResolved" id="dateResolved" onChange={this.updateDateResolved} />
-                    </FormGroup>
-
-                    <FormGroup>
-                        <Label for="description">Description</Label>
-                        <Input type="text" name="description" id="description" onChange={this.updateDescription} />
-                    </FormGroup>
-
-                    
-
-
+         </tbody>
+         </table>
+        </div>
+     </header>
+        </div>
                     <br />
-                    <Button type="submit" >
-                        Submit
-                </Button>
+                    <Button type="submit" color="warning">Submit</Button>
+                    
                 </Form>
+
+                
             </div>
         )
     }

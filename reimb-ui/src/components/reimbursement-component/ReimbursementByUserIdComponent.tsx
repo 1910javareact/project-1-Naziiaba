@@ -39,7 +39,7 @@ export class ReimbursementByUserIdComponent extends React.Component<IReimburseme
                         <Input type="text" name="userId" id="userId" value={this.state.userId} onChange={this.updateUserId} autoFocus />
                     </FormGroup>
 
-                    <Button type="submit"  variant="contained" color="primary" className='{classes.submit}'>
+                    <Button type="submit"  variant="contained" color="warning" className='{classes.submit}'>
                         Find Reimbursement
                     </Button>
                 </Form>

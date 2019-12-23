@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: rgba(118, 171, 247, 0.623);
+  font-size: medium;
+  
 }
 
 .App-logo {
@@ -30,7 +33,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #a56317;
 }
 
 @keyframes App-logo-spin {
@@ -41,3 +44,33 @@
     transform: rotate(360deg);
   }
 }
+
+form {
+  padding-left: 30%;
+  padding-right: 30%;
+
+  
+}
+
+
+.container1 {
+  margin-bottom: 50px;
+  height: 150px;
+  
+}
+
+table {
+  text-align: right;
+}
+/* .straight {
+  margin-left: 20px;
+
+    display:inline-block;
+    float:left;
+
+} */
+
+/* html { 
+  background-color: rgb(74, 100, 212);
+   
+} */

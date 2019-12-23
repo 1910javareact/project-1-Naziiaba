@@ -6,17 +6,17 @@ import { Table } from 'reactstrap'
 
 interface IReimbursementInfoComponentProps {
     reimbursement: Reimbursement[]
-    user: Users
+    user: User
     oReimbursementInfo: (userId: number) => void
 }
 
 export class ReimbursementInfoComponent extends React.Component<IReimbursementInfoComponentProps, any>{
     componentDidMount() {
-        this.props.oReimbursementInfo(this.props.users.userId)
+        this.props.oReimbursementInfo(this.props.user.userId)
     }
 
     render() {
-        let rows = this.props.reimbursements.map((e) => {
+        let rows = this.props.reimbursement.map((e) => {
             return <ReimbursementRowComponent reimbursement={e} key={'reimbursement' + e.reimbursementId} />
         })
         return (
