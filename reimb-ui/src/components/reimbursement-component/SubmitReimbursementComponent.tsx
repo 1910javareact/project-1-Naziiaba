@@ -3,7 +3,6 @@ import { oRemoteSubmitReimbursement } from '../../remote/orion-clients/orion-rei
 import { Form, Button, FormGroup, Label, Input } from 'reactstrap'
 
 
-
 export class NewReimbursementComponent extends React.Component<any, any> {
     constructor(props: any) {
         super(props)
@@ -98,7 +97,7 @@ export class NewReimbursementComponent extends React.Component<any, any> {
     render() {
         return (
             <div>
-                <h2>Make a new Reimbursement</h2>
+                <h2>Create a new Reimbursement</h2>
                 <br/>
                 <Form onSubmit={this.submitReimbursement} className="updateReimbursement" noValidate autoComplete="off">
                     <FormGroup>
@@ -126,20 +125,7 @@ export class NewReimbursementComponent extends React.Component<any, any> {
                         <Input type="text" name="description" id="description" onChange={this.updateDescription} />
                     </FormGroup>
 
-                    <FormGroup>
-                        <Label for="resolver">Resolver</Label>
-                        <Input type="text" name="resolver" id="resolver" onChange={this.updateResolver} />
-                    </FormGroup>
-
-                    <FormGroup>
-                        <Label for="status">Status</Label>
-                        <Input type="text" name="status" id="status" onChange={this.updateStatus} />
-                    </FormGroup>
-
-                    <FormGroup>
-                        <Label for="type">Type</Label>
-                        <Input type="text" name="type" id="type" onChange={this.updateType} />
-                    </FormGroup>
+                    
 
 
                     <br />
