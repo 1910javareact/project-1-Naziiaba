@@ -1,5 +1,5 @@
 import React, { SyntheticEvent } from 'react'
-import { oRemoteSubmitReimbursement } from '../../remote/orion-clients/o-reimbursement'
+import { oRemoteSubmitReimbursement } from '../../remote/orion-clients/orion-reimbursement'
 import { Form, Button, FormGroup, Label, Input } from 'reactstrap'
 
 
@@ -98,8 +98,56 @@ export class NewReimbursementComponent extends React.Component<any, any> {
     render() {
         return (
             <div>
+                <h2>Make a new Reimbursement</h2>
+                <br/>
+                <Form onSubmit={this.submitReimbursement} className="updateReimbursement" noValidate autoComplete="off">
+                    <FormGroup>
+                        <Label for="author">Author</Label>
+                        <Input type="text" name="author" id="author" onChange={this.updateAuthor} />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label for="amount">Amount</Label>
+                        <Input type="text" name="amount" id="amount" onChange={this.updateAmount} />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label for="dateSubmitted">Date Submitted</Label>
+                        <Input type="text" name="dateSubmitted" id="dateSubmitted" onChange={this.updateDateSubmitted} />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label for="dateResolved">Date Resolved</Label>
+                        <Input type="text" name="dateResolved" id="dateResolved" onChange={this.updateDateResolved} />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label for="description">Description</Label>
+                        <Input type="text" name="description" id="description" onChange={this.updateDescription} />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label for="resolver">Resolver</Label>
+                        <Input type="text" name="resolver" id="resolver" onChange={this.updateResolver} />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label for="status">Status</Label>
+                        <Input type="text" name="status" id="status" onChange={this.updateStatus} />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label for="type">Type</Label>
+                        <Input type="text" name="type" id="type" onChange={this.updateType} />
+                    </FormGroup>
 
 
-
-                
+                    <br />
+                    <Button type="submit" >
+                        Submit
+                </Button>
+                </Form>
             </div>
+        )
+    }
+} 
