@@ -1,6 +1,6 @@
 import React, { SyntheticEvent } from 'react'
 import { User } from '../../models/user'
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, Row, Col, Jumbotron } from "reactstrap";
 
 interface ILoginComponentProps {
     user: User
@@ -35,19 +35,19 @@ export class LoginComponent extends React.Component<ILoginComponentProps, any>{
     render() {
         return (
             <div>
-                <Form onSubmit={this.submitLogin}>
-                    <FormGroup>
-                        <Label for="exampleUsername">Username</Label>
-                        <Input value={this.state.username} onChange={this.updateUsername} type="text" name="username" id="exampleUsername" />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="examplePassword">Password</Label>
-                        <Input value={this.state.password} onChange={this.updatePassword} type="password" name="password" id="examplePassword" />
-                    </FormGroup>
-                    <Button color='info'>Submit</Button>
-                </Form>
-                {this.state.username}
-            </div>
+                
+            
+                {/* <Button color='primary'>Login</Button> */}
+                </Col>
+                
+                </Row>
+                
+            </Form>
+            <p> {this.props.user.username}</p>
+            </Jumbotron>
+        </div>
         )
     }
 }
+
+{/* <input style={{backgroundColor: 'blue'}} type="text" /> */}
